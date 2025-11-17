@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parallax Effect</title>
+
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Sekcja z paralaksą */
+    .parallax {
+        background-image: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+        height: 500px;
+        background-attachment: fixed;   
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+   
+    .content {
+        background: #fff;
+        padding: 40px;
+        text-align: center;
+        font-size: 22px;
+    }
+    @media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
+    }
+}
+
+/* Bardzo małe ekrany */
+@media (max-width: 480px) {
+    .content {
+        font-size: 1rem;
+        padding: 30px 15px;
+    }
+    .parallax {
+        height: 35vh;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="parallax"></div>
+
+<div class="content">
+    <h2>witam</h2>
+    <p>chyba dziala</p>
+</div>
+
+<div class="parallax"></div>
+
+<div class="content">
+    <h2>hejka</h2>
+    <p>mam</p>
+</div>
+</body>
+</html>
